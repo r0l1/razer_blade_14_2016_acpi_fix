@@ -9,7 +9,7 @@ With this DSDT fix the system works as expected and system lockups due to power 
 
 ### Package Installation
 
-
+- [Arch Linux AUR Package](https://aur.archlinux.org/packages/razer_blade_14_2016_acpi_dsdt-git/)
 
 ### Manual Installation
 
