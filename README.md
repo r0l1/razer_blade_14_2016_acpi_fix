@@ -1,4 +1,4 @@
-# Razer Blade 14 2016 ACPI DSDT Fix
+# Razer Blade 14 2016 ACPI DSDT Firmware Fix
 
 This repository contains an ACPI DSDT fix for the Razer Blade 14 2016.
 If the discrete Nvidia GPU is switched off before starting Xorg or Wayland, then the system freezes.
