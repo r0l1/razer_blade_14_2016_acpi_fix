@@ -1,3 +1,6 @@
+# DESTDIR is used to install into a different root directory
+DESTDIR?=/
+
 all:
 	iasl -tc dsdt.dsl
 	mkdir -p kernel/firmware/acpi
@@ -11,7 +14,7 @@ clean:
 	@rm -rf kernel
 
 install:
-	cp -f acpi_override /boot/acpi_override
+	cp -f acpi_override $(DESTDIR)/boot/acpi_override
 
 uninstall:
-	rm -f /boot/acpi_override
+	rm -f $(DESTDIR)/boot/acpi_override
