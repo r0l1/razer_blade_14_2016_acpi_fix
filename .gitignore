@@ -1,0 +1,9 @@
+*~
+.*
+.DS_Store
+._.DS_Store
+
+dsdt.aml
+dsdt.hex
+acpi_override
+kernel
