@@ -14,7 +14,8 @@ clean:
 	@rm -rf kernel
 
 install:
-	cp -f acpi_override $(DESTDIR)/boot/acpi_override
+	mkdir -p "$(DESTDIR)/boot/"
+	cp -f acpi_override "$(DESTDIR)/boot/acpi_override"
 
 uninstall:
-	rm -f $(DESTDIR)/boot/acpi_override
+	rm -f "$(DESTDIR)/boot/acpi_override"
