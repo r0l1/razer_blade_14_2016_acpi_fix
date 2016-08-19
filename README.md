@@ -20,7 +20,7 @@ make all
 sudo make install
 ```
 
-This will compile and install the DSDT fix to the file `/boot/acpi_override`.
+This will compile and install the DSDT fix to the file `/boot/acpi_override.img`.
 
 ## Final Configuration
 
@@ -29,7 +29,7 @@ Lastly, configure the bootloader to load your CPIO archive. For example, using S
 ```
 title	 Arch Linux
 linux	 /vmlinuz-linux
-initrd   /acpi_override
+initrd   /acpi_override.img
 initrd	 /initramfs-linux.img
 options  root=PARTUUID=ec9d5998-a9db-4bd8-8ea0-35a45df04701 resume=PARTUUID=58d0aa86-d39b-4fe1-81cf-45e7add275a0 ...
 ```
