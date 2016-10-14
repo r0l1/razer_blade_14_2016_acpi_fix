@@ -1,4 +1,4 @@
-# Razer Blade 14 2016 ACPI Fix
+# Razer Blade 14 2016 ACPI Firmware Fix
 
 This repository contains an ACPI fix for the Razer Blade 14 2016.
 If the discrete Nvidia GPU is switched off before starting Xorg or Wayland, then the system freezes.
