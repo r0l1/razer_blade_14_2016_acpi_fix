@@ -2,20 +2,20 @@
 DESTDIR?=/
 
 all:
-	iasl -tc dsdt.dsl
+	iasl -ve -tc ssdt5.dsl
 	mkdir -p kernel/firmware/acpi
-	cp dsdt.aml kernel/firmware/acpi
-	find kernel | cpio -H newc --create > acpi_override.img
+	cp ssdt5.aml kernel/firmware/acpi
+	find kernel | cpio -H newc --create > razer_acpi_fix.img
 
 clean:
-	@rm -f dsdt.aml
-	@rm -f dsdt.hex
-	@rm -f acpi_override.img
+	@rm -f ssdt5.aml
+	@rm -f ssdt5.hex
+	@rm -f razer_acpi_fix.img
 	@rm -rf kernel
 
 install:
 	mkdir -p "$(DESTDIR)/boot/"
-	cp -f acpi_override.img "$(DESTDIR)/boot/acpi_override.img"
+	cp -f razer_acpi_fix.img "$(DESTDIR)/boot/razer_acpi_fix.img"
 
 uninstall:
-	rm -f "$(DESTDIR)/boot/acpi_override.img"
+	rm -f "$(DESTDIR)/boot/razer_acpi_fix.img"
