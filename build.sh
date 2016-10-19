@@ -27,6 +27,7 @@ iasl -e "$TMPDIR"/*.dat -d "$TMPDIR"/SSDT5.dat
 
 # Patch.
 sed -i '/^ *External/! s/OSYS/0x07D9/g' "$TMPDIR/SSDT5.dsl"
+sed -i '/^ *DefinitionBlock/ s/0x00003000/0x00003001/g' "$TMPDIR/SSDT5.dsl"
 
 # Compile.
 iasl -ve -tc "$TMPDIR/SSDT5.dsl"
