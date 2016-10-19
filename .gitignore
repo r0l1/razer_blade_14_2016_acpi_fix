@@ -3,7 +3,5 @@
 .DS_Store
 ._.DS_Store
 
-ssdt5.aml
-ssdt5.hex
+build
 razer_acpi_fix.img
-kernel

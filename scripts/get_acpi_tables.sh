@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 DEST="./acpi_tables.tar.gz"
 TMPDIR="/tmp/get_acpi_tables_tmp"
 

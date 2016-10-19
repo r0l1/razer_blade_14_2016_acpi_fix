@@ -7,16 +7,11 @@ With this SSDT fix the system works as expected and system lockups due to power 
 
 ## Installation
 
-### Package Installation
-
-- [Arch Linux AUR Package](https://aur.archlinux.org/packages/razer_blade_14_2016_acpi_fix-git/)
-
-### Manual Installation
-
 The build process requires `iasl` and `cpio`.
+Root privileges are required for the build process, because the ACPI tables of the local machine are extracted on the fly.
 
 ```
-make all
+sudo make all
 sudo make install
 ```
 
