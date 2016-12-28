@@ -30,7 +30,7 @@ sed -i '/^ *External/! s/OSYS/0x07D9/g' "$TMPDIR/SSDT5.dsl"
 sed -i '/^ *DefinitionBlock/ s/0x00003000/0x00003001/g' "$TMPDIR/SSDT5.dsl"
 
 # Compile.
-iasl -ve -tc "$TMPDIR/SSDT5.dsl"
+iasl -ve -tc -p "$TMPDIR/SSDT5" "$TMPDIR/SSDT5.dsl"
 
 # Create the image.
 mkdir -p "$TMPDIR/kernel/firmware/acpi"
